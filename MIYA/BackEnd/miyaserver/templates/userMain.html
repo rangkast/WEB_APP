@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Miya Home</title>
+  <script src="/static/js/signUp.js"></script>
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body text-center">
+            <img src="/static/images/miya_logo.png" class="w-120 rounded-circle">
+            <div>
+              <h1>Welcom MIYA Home.</h1><br></br>
+              <p class="medium" onclick="creatorButton()"><u>Creator</u></p>
+                <div class="hidden_menu" id="creatorMenu">
+                  <!-- 여기 주소 -->
+                  <a href="http://10.157.15.19:8082" class="text-center">voxel editor</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="/voxelPost" class="text-center">voxel post</a><br></br>
+                </div>
+
+              <a href="/placemaker" class="text-center"><p class="small">placemaker</p></a>
+              <a href="/miyaworld" class="text-center"><p class="small">MiyaWorld</p></a>
+
+              <nav>
+                <ul class="nav nav-pills pull-right">
+                  <li role="presentation" class="active"><a href="/logout">Logout</a></li>
+                </ul>
+              </nav>
+            </div>    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type = "text/javascript">
+    function creatorButton() {
+      var x=document.getElementById("creatorMenu");
+      if (window.getComputedStyle(x).display === "none"){
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+    <script type = "text/javascript">
+      function testButton() {
+        var x=document.getElementById("testMenu");
+        if (window.getComputedStyle(x).display === "none"){
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>
+{% endblock %}

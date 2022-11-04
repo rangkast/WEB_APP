@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Miya Entry</title>
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body text-center pb-0">
+            <img src="/static/images/miya_logo.png" class="w-120 rounded-circle">
+            <h5 class="mt-2">Login to your world.</h5>
+
+            <form class="form-signin" action="/validateLogin" method="post">
+              <div class="form-group">
+                <div class="invalid-feedback d-block text-left">
+				          <label for="inputUser" class="sr-only">User Name</label>
+				          <input type="text" name="inputUser" id="inputUser" class="form-control" placeholder="User Name" required autofocus>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="invalid-feedback d-block text-left">
+				          <label for="inputPassword" class="sr-only">Password</label>
+				          <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+                </div>
+              </div>
+
+              <input type="submit" value="signin" class="form-control btn btn-primary">
+            </form>
+
+            <a href="/showSignUp" class="text-left"><p class="small">signup</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

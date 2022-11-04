@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Miya Home</title>
+  <style type="text/css">
+    .hidden_menu{
+      display: none;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body text-center">
+            <div>
+              <h1>Voxel Post Page</h1>
+              <div id="container">
+                <div id="main">
+                  <div id="main-title">
+                    <h3>User Name: {{user}}</h3>
+                    <h1>Input Data</h1>
+                  </div>
+            
+                  <input class="form-control mt-2 mb-2" type="text" placeholder="object ID" id="post_objectID">
+                  <textarea class="form-control mt-2 mb-2" name="post_content" id="post_content" cols="80" rows="20" placeholder="voxel data"></textarea>
+                  <input class="form-control mt-2" type="text" placeholder="file location" id="post_fileLocation"><br>
+                  <span class="btn btn-primary float-right" onclick="create_post()">Upload to Server</span>
+                </div>
+              </div>
+              <nav>
+                <ul class="nav nav-pills pull-right">
+                  <li role="presentation" class="active"><a href="/userMain">Back to Main</a></li>
+                </ul>
+              </nav>
+            </div>    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type = "text/javascript">
+  function creatorButton() {
+    var x=document.getElementById("creatorMenu");
+    if (window.getComputedStyle(x).display === "none"){
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
+{% endblock %}

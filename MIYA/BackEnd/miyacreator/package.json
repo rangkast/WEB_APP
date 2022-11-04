@@ -1,0 +1,42 @@
+{
+  "name": "miyaim",
+  "version": "0.0.1",
+  "description": "MIYA Item Maker",
+  "scripts": {
+    "start": "parcel -p 8082 src/index.html",
+    "build": "parcel build src/index.html --no-source-maps",
+    "build:gh-pages": "parcel build src/index.html --no-source-maps --public-url /miyaim/"
+  },
+  "author": "Yong Tae Jeon",
+  "license": "MIT",
+  "dependencies": {
+    "@jaames/iro": "^5.1.5",
+    "axios": "^0.24.0",
+    "config": "^3.3.6",
+    "event-lite": "^0.1.2",
+    "express": "^4.17.2",
+    "fs": "^0.0.1-security",
+    "micromodal": "^0.4.6",
+    "path": "^0.12.7",
+    "purecss": "^2.0.3",
+    "request": "^2.88.2",
+    "storeon": "^3.0.2",
+    "three": "^0.135.0",
+    "tippy.js": "^6.1.0",
+    "toaster-js": "^2.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.0.3",
+    "parcel": "^1.12.4",
+    "posthtml": "^0.16.5",
+    "posthtml-include": "^1.4.0"
+  }
+}
